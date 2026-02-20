@@ -3,7 +3,7 @@ import time
 
 pot = ADC(Pin(26)) 
 
-window_size = 100  # number of samples for moving average
+window_size = 5  # number of samples for moving average
 values = []
 
 while True:
@@ -18,6 +18,7 @@ while True:
 
     # compute moving average
     avg_emg = sum(values) / len(values)
+    voltage = (avg_emg /13)
 
-    print(avg_emg/100)
-    time.sleep(0.05)
+    print(voltage)
+    time.sleep(0.01)

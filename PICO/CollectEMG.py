@@ -8,7 +8,7 @@ header = "Timestamp,Value\n"
 ADC_Port = 26
 Button = Pin(14, Pin.IN, Pin.PULL_UP)
 
-Window_Size = 100
+Window_Size = 5000
 value = []
 rows = []
 ts = 0
@@ -33,8 +33,9 @@ def ReadADC(pin, window_size=5):
 
     avg_emg = sum(value) / len(value)
 
-    ts = time() 
-    return [ts, avg_emg / 100]
+    ts = time()
+    voltage = (avg_emg / 65535) * 3.3
+    return [ts, voltage]
 
 
 def main():

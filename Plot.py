@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-filename = "/home/vpadungk/Desktop/Project 0/EMG-Signal-Classification-and-Simulation-for-Prosthetic-Arm-Control/TESTTEST.csv"
+filename = "/home/vpadungk/Desktop/Project 0/EMG-Signal-Classification-and-Simulation-for-Prosthetic-Arm-Control/OPEN.csv"
 
 t = []
 v = []
