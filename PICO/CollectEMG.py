@@ -34,7 +34,7 @@ def ReadADC(pin, window_size=5):
     avg_emg = sum(value) / len(value)
 
     ts = time()
-    voltage = (avg_emg / 65535) * 3.3
+    voltage = avg_emg * 3.3 / 65535
     return [ts, voltage]
 
 
